@@ -1,0 +1,26 @@
+.button {
+  display: inline-flex;
+  height: 24px;
+  padding: 10px 18px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.primary-button {
+  @extend .button;
+  @extend .Body2_Bold_Inter16;
+
+  color: var(--text-white-inactive-normal);
+
+  border-radius: 8px;
+  border: 1px solid var(--Button-Borders-BT-Inactive-Border, #2d446e);
+  background: var(
+    --Button-Fill-Primary-Fill-BT-Normal-Primary-Blue-Button,
+    #2d446e
+  );
+
+  /* Button/Primary/Default */
+  box-shadow: 0px 1px 5px 0px rgba(45, 68, 110, 0.1);
+}

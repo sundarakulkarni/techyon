@@ -1,0 +1,26 @@
+@import "./global/css/text.scss";
+@import "./global/css/variables.scss";
+@import "./global/css/buttons.scss";
+
+body {
+  margin: 0px;
+}
+
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  .lhs-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    @extend .H4_Medium_Inter32;
+    color: var(--text-colors-black-50-text-black);
+  }
+
+  .rhs-container {
+    @extend .Body1_Regular_Inter12_Normal_Text;
+  }
+}

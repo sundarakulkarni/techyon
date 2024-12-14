@@ -1,0 +1,95 @@
+@import "./global/css/text.scss";
+
+.app-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 8px;
+  border: 2px solid
+    var(--frames-colors-frame-borders-grey-80-grey-hover-frame-border);
+  background: #fff;
+
+  /* Table_Shadow */
+  box-shadow: 0px 0px 5px 3px rgba(0, 0, 0, 0.1);
+
+  .app-table-header {
+    display: flex;
+
+    .app-table-cell {
+      border-top: none;
+      border-bottom: none;
+
+      @extend .Body1_Bold_Inter12;
+
+      img {
+        height: 16px;
+        width: 16px;
+      }
+    }
+  }
+
+  .app-table-row {
+    display: flex;
+  }
+
+  .app-table-cell {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    height: 40px;
+    padding: 0px 15px;
+    border: 1px solid
+      var(--frames-colors-frame-borders-grey-100-grey-border-frames);
+    border-left: none;
+    border-bottom: none;
+
+    @extend .Body1_Regular_Inter12_Normal_Text;
+
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
+
+.percentage {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  height: 14px;
+  width: 100%;
+  color: var(--text-colors-black-50-text-black, #404040);
+  font-family: Inter;
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.028px;
+
+  .percentage-bar {
+    width: calc(100% - 25px);
+    height: 14px;
+    flex-shrink: 0;
+    border-radius: 7px;
+    background: #eee;
+    position: relative;
+
+    .value-bar {
+      border-radius: 7px 0px 0px 7px;
+      background: #6c6;
+      height: 14px;
+    }
+    .value {
+      position: absolute;
+      left: 50%;
+      top: 0px;
+      transform: translateX(-50%);
+      color: var(--prime-blue, #2d446e);
+      font-family: Inter;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 0.03px;
+    }
+  }
+}

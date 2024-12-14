@@ -1,0 +1,103 @@
+@import "../../../../global/css/text.scss";
+
+.overview-page {
+  .kanban-board-container {
+    display: flex;
+    padding: 20px;
+    justify-content: center;
+    gap: 20px;
+    align-self: stretch;
+    border-radius: 8px;
+    border: 1px solid
+      var(--frames-colors-frame-borders-grey-10-grey-border-frames-changed);
+
+    /* Frame Shadows/Frame Normal Shadow */
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.15);
+
+    .kanban-board-column {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+
+      .column-header {
+        display: flex;
+        padding: 4px 12px;
+        align-items: center;
+        gap: 12px;
+        border-radius: 8px;
+        width: fit-content;
+
+        @extend .Body1_SemiBold_Inter12;
+        color: var(--Text-Colors-White-White-Active_pressing);
+      }
+
+      .kanbanCard {
+        width: 250px;
+        height: 155px;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+        flex-shrink: 0;
+        border-radius: 8px;
+        background: var(--Card-BG-Card-Normal, #fefefe);
+        box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.15);
+
+        &-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+
+          &-lhs,
+          &-rhs {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            @extend .Body1_Bold_Inter12;
+            color: var(--text-colors-black-50-text-black);
+          }
+        }
+
+        &-date-info {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+
+          @extend .Body1_Medium_Inter12;
+          color: var(--text-colors-black-70-text-black-main-black);
+        }
+
+        &-footer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          align-self: flex-end;
+          width: 100%;
+          padding-top: 12px;
+          border-top: 0.5px solid
+            var(
+              --frames-colors-frame-borders-grey-10-grey-border-frames-changed
+            );
+
+          &-rhs {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            @extend .Body1_Bold_Inter12;
+            color: var(--text-colors-black-50-text-black);
+          }
+        }
+      }
+
+      .view-more-button {
+        @extend .Body1_Regular_Inter12_Normal_Text;
+        color: var(--Text-Colors-Hyperlink-Link-Color);
+        text-align: center;
+        text-decoration: underline;
+      }
+    }
+  }
+}
